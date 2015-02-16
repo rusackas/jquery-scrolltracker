@@ -8,9 +8,9 @@ To install, copy the javascript file into your project and add it in the header 
 
 Then, in your site's main javascript file, initialize the plugin with jQuery selector(s) of the elements you'd like to track, like so:
 
-$(function () {
-  $.scrolltracker('body .watchpos, section');
-});
+    $(function () {
+      $.scrolltracker('body .watchpos, section');
+    });
 
 Then, as you scroll your page, the element(s) will have one of the following CSS classes added.:
 
