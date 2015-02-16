@@ -9,7 +9,8 @@
     ".git*",
     "*bower.json",
     "*jquery.json",
-    "index*"
+    "index*",
+    "config.codekit"
   ],
   "dependencies": { "jquery": "latest" }
 }
