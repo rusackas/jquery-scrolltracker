@@ -11,12 +11,12 @@ To install, copy the javascript file into your project and add it in the header 
 Then, in your site's main javascript file, initialize the plugin with jQuery selector(s) of the elements you'd like to track, like so:
 
     $(function () {
-      $.scrolltracker('body .watchpos, section');
+      $.scrolltracker('div.watchme, div.thistoo');
     });
 
 Then, as you scroll your page, the element(s) will have one of the following CSS classes added:
 
-**Vertical statuses [See demo for examples](https://rusackas.github.io/jquery-scrolltracker/demos/index.html) **
+**Vertical statuses** [See demo for examples](https://rusackas.github.io/jquery-scrolltracker/demos/index.html)
 * onscreen_vert = element contained completely in the viewport, not cut off on the top or bottom
 * offscreen_vert = element is completely offscreen, not at all in the viewport
 * overflowing_vert = element is onscreen, but does not fit in the viewport, and is cropped off on both the top and bottom
