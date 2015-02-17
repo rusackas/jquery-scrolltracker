@@ -7,86 +7,20 @@
   <title>Scrolltracker Demo</title>
   <meta name="description" content="Scrolltracker jQuery plugin example">
   <meta name="author" content="Evan Rusackas">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-
-<body>
-  <div class="column quarterheight">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="column halfheight">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="column fullheight">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="column doubleheight">
-    <div></div>
-    <div></div>
-  </div>
-  <div id="key">
-    <h3>Vertical scrolling classes</h3>
-    
-    .onscreen_vert
-    <div class="screenwrapper">
-      <div class="screen"></div>
-      <div class="block onscreen_vert"></div>
-    </div>
-    .offscreen_vert
-    <div class="screenwrapper">
-      <div class="screen"></div>
-      <div class="block offscreen_vert1"></div>
-      <div class="block offscreen_vert2"></div>
-    </div>
-    .overflowing_vert
-    <div class="screenwrapper">
-      <div class="screen"></div>
-      <div class="block overflowing_vert"></div>
-    </div>
-    .onfromtop
-    <div class="screenwrapper">
-      <div class="screen"></div>
-      <div class="block onfromtop"></div>
-    </div>
-    .onfrombottom
-    <div class="screenwrapper">
-      <div class="screen"></div>
-      <div class="block onfrombottom"></div>
-    </div>
-    
-  </div>
+  <style type="text/css">
+    body{
+      font-family: helvetica, arial, sans-serif;
+    }
+  </style>
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.js" type="text/javascript"></script>
-  <script src="../jquery.scrolltracker.min.js" type="text/javascript"></script>
-  <script>
-    $(function () {
-      $.scrolltracker('.column > div');
-    });
-  </script>
+</head>
+  
+<body>
+
+  <h2>Demos</h2>
+
+  <p>There are two demos herein, one for <a href="vertical/index.html">vertical</a> (the default setting) and <a href="horizontal/index.html">horizontal</a>. Each shows the classes that are added to the tracked element(s). These classes are then displayed in the tracked elements with CSS, which also recolors them according to position.</p>
+
+  <p>Note that you can also set the direction option to "both" when initializing the plugin, which tracks objects in both directions, adding two classes in doing so.</p>
 </body>
 </html>

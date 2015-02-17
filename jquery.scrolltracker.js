@@ -5,14 +5,10 @@
       //set default options
       var settings = $.extend({
         // These are the defaults.
-        findVert: true,
-        findHoriz:false
+        direction: "vertical"
+        //you can override this with "horizontal" or "both"
       }, options );
-      
-      //adjusting setings if correct options are passed in
-      if(options=='horiz') settings.findVert = false;
-      else if(options=='vert') settings.findHoriz = false;
-    
+          
       var locateVert = function(rect){
         if (
           rect.top >= 0 &&
@@ -35,7 +31,6 @@
       }
       
       var locateHoriz = function(rect){
-        //console.log ('left: '+rect.left+' right: '+rect.right+' window.innerWidth: '+window.innerWidth);
         if (
           rect.left >= 0 &&
           rect.right <= (window.innerWidth || document.documentElement.clientWidth) 
@@ -80,7 +75,7 @@
         //pull the element from the jQuery object, get its bounding rectangle
         var rect = $this[0].getBoundingClientRect();
         
-        if(settings.findVert){
+        if(settings.direction == "vertical" || settings.direction == "both"){
           var screenstatus = locateVert(rect);
           if (screenstatus == 'onscreen') {
             $this.addClass('onscreen_vert');
@@ -98,7 +93,7 @@
             $this.addClass('onfrombottom');
           } else $this.removeClass('onfrombottom');
         }
-        if(settings.findHoriz){
+        if(settings.direction == "horizontal" || settings.direction == "both"){
           var screenstatus = locateHoriz(rect);
           if (screenstatus == 'onscreen') {
             $this.addClass('onscreen_horiz');
@@ -116,7 +111,7 @@
             $this.addClass('onfromright');
           } else $this.removeClass('onfromright');
         }
-//        if(settings.findVert && settings.findHoriz){
+//        if(settings.direction == "both"){
 //          var screenstatus = locateVertHoriz(rect);
 //          if (screenstatus == 'onscreen') {
 //            $this.addClass('onscreen_horiz');

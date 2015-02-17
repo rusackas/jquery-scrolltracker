@@ -13,19 +13,32 @@ Then, in your site's main javascript file, initialize the plugin with jQuery sel
     $(function () {
       $.scrolltracker('div.watchme, div.thistoo');
     });
+    
+By default, the plugin tracks vertical scrolling. You can override that to track horizontal position by setting the "direction" option like so:
 
-Then, as you scroll your page, the element(s) will have one of the following CSS classes added:
+    $(function () {
+      $.scrolltracker('#trackthis',{direction:"horizontal"});
+    });
 
-**Vertical statuses** [See demo for examples](https://rusackas.github.io/jquery-scrolltracker/demos/index.html)
+You can also set the direction to "both" if you want to track elements on both axes.
+
+As you scroll your page, the element(s) will have CSS classes added reflecting their position relative to the viewport:
+
+**Vertical statuses** [See demo](https://rusackas.github.io/jquery-scrolltracker/demos/vertical/index.html)
 * onscreen_vert = element contained completely in the viewport, not cut off on the top or bottom
 * offscreen_vert = element is completely offscreen, not at all in the viewport
 * overflowing_vert = element is onscreen, but does not fit in the viewport, and is cropped off on both the top and bottom
 * onfromtop = element is partly onscreen, partly cropped off at the top of the viewport
 * onfrombottom = element is partly onscreen, partly cropped off at the bottom of the viewport
 
-**NOTE:** At the moment, only vertical scroll tracking is supported. Horizontal tracking coming soon.
+**Horizontal statuses** [See demo](https://rusackas.github.io/jquery-scrolltracker/demos/horizontal/index.html)
+* onscreen_horiz = element contained completely in the viewport, not cut off on the left or right
+* offscreen_horiz = element is completely offscreen, not at all in the viewport
+* overflowing_horiz = element is onscreen, but does not fit in the viewport width, and is cropped off on both the left and right
+* onfromleft = element is partly onscreen, partly cropped off at the left of the viewport
+* onfromright = element is partly onscreen, partly cropped off at the right of the viewport
 
-You can then use CSS to style elements according to their position quite easily. Demos coming soon...
+You can then use these classes in your CSS to style/animate elements according to their position quite easily. 
 
 ## Copyright
 
