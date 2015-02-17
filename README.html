@@ -1,0 +1,41 @@
+<h1>jquery-scrolltracker</h1>
+
+<p>A jQuery plugin that tracks designated elements' scroll position relative to the viewport, and adds CSS classes to the element(s) describing the current position. Great for adding CSS transitions to elements as they appear/disappear from view.</p>
+
+<h2>Demo</h2>
+
+<p><a href="demos/index.html">Vertical scrolling demo</a></p>
+
+<h2>Installation</h2>
+
+<p>To install, copy the javascript file into your project and add it in the header like so:</p>
+
+<pre><code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="jquery.scrolltracker.js" type="text/javascript"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Then, in your site&rsquo;s main javascript file, initialize the plugin with jQuery selector(s) of the elements you&rsquo;d like to track, like so:</p>
+
+<pre><code>$(function () {
+  $.scrolltracker('body .watchpos, section');
+});
+</code></pre>
+
+<p>Then, as you scroll your page, the element(s) will have one of the following CSS classes added:</p>
+
+<p><strong>Vertical statuses</strong>
+* onscreen_vert = element contained completely in the viewport, not cut off on the top or bottom
+* offscreen_vert = element is completely offscreen, not at all in the viewport
+* overflowing_vert = element is onscreen, but does not fit in the viewport, and is cropped off on both the top and bottom
+* onfromtop = element is partly onscreen, partly cropped off at the top of the viewport
+* onfrombottom = element is partly onscreen, partly cropped off at the bottom of the viewport</p>
+
+<p><strong>NOTE:</strong> At the moment, only vertical scroll tracking is supported. Horizontal tracking coming soon.</p>
+
+<p>You can then use CSS to style elements according to their position quite easily. Demos coming soon&hellip;</p>
+
+<h2>Copyright</h2>
+
+<p>Copyright &copy; Evan Rusackas. See LICENSE for details.</p>
+
+<p><a href="http://www.rusackas.com">http://rusackas.com</a></p>
