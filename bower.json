@@ -2,6 +2,7 @@
   "name": "scrolltracker",
   "version": "1.0.0",
   "main": [ "./jquery.scrolltracker.js" ],
+  "license": "MIT",
   "ignore":
   [
     "README*",
@@ -12,5 +13,13 @@
     "index*",
     "config.codekit"
   ],
-  "dependencies": { "jquery": "latest" }
+  "dependencies": { "jquery": ">=2.0.0" },
+  "keywords": [
+    "jquery",
+    "javascript",
+    "CSS",
+    "scroll",
+    "plugin",
+    "position"
+  ]
 }
