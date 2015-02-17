@@ -1,7 +1,8 @@
 # jquery-scrolltracker
 A jQuery plugin that tracks designated elements' scroll position relative to the viewport, and adds CSS classes to the element(s) describing the current position. Great for adding CSS transitions to elements as they appear/disappear from view. 
 ## Demo
-[Vertical scrolling demo](https://rusackas.github.io/jquery-scrolltracker/demos/index.html)
+[Vertical scrolling demo](https://rusackas.github.io/jquery-scrolltracker/demos/vertical/index.html)
+[Horizontal scrolling demo](https://rusackas.github.io/jquery-scrolltracker/demos/horizontal/index.html)
 ## Installation
 To install, copy the javascript file into your project and add it in the header like so:
 
