@@ -1,6 +1,6 @@
 {
   "name": "scrolltracker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": [ "./jquery.scrolltracker.js" ],
   "license": "MIT",
   "ignore":
@@ -10,7 +10,7 @@
     ".git*",
     "*bower.json",
     "*jquery.json",
-    "index*",
+    "./index*",
     "config.codekit"
   ],
   "dependencies": { "jquery": ">=2.0.0" },
